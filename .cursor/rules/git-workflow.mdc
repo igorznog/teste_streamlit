@@ -1,0 +1,35 @@
+---
+description: Workflow de Git e GitHub para versionamento de projetos FIAP
+alwaysApply: false
+---
+
+# Git Workflow — FIAP
+
+## Commits
+- Mensagens semânticas: `feat:`, `fix:`, `docs:`, `refactor:`, `test:`.
+- Mensagens em inglês (convenção) ou português, conforme preferência do Product Owner.
+- Nunca commitar sem o Product Owner pedir explicitamente.
+
+## .gitignore sugerido (ajuste por projeto)
+```
+venv/
+__pycache__/
+*.pyc
+.Rhistory
+.RData
+.Rproj.user/
+.ipynb_checkpoints/
+.DS_Store
+node_modules/
+```
+> Inclua `*.csv` ou pastas grandes só se fizer sentido ignorar. Regras do Cursor em `.cursor/rules/` costumam ser **versionadas** neste framework.
+
+## Branches
+- `main` como branch principal.
+- Trabalho solo: commit na main é aceitável.
+- Trabalho em grupo: feature branches + Pull Request.
+
+## GitHub
+- Nunca fazer push sem o Product Owner pedir.
+- Nunca usar force push.
+- Sempre verificar `git status` antes de commitar.

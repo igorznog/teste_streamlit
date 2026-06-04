@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "hooks": {
+    "afterFileEdit": [
+      {
+        "command": ".cursor/hooks/sync-dashboard.sh",
+        "timeout": 10,
+        "failClosed": false
+      }
+    ]
+  }
+}

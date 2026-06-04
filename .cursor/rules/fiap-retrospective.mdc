@@ -1,0 +1,40 @@
+---
+description: After-action review pós-task. Ativar após concluir uma task ou quando o Product Owner pedir retrospectiva.
+alwaysApply: false
+---
+
+# Retrospectiva Pós-Task
+
+Após concluir uma task (todos os requisitos de código atendidos), executar esta retrospectiva.
+
+## Passo 1 — O que funcionou
+Listar práticas que deram certo e devem continuar:
+- Ferramentas que funcionaram de primeira
+- Padrões que economizaram tempo
+- Delegações que foram eficientes
+
+## Passo 2 — O que deu problema
+Listar fricções e erros que causaram retrabalho:
+- Bugs que só apareceram no teste
+- Dependências que falharam na instalação
+- Ambiguidades no enunciado que custaram tempo
+
+## Passo 3 — Propor melhorias nas rules
+Para cada problema identificado, propor uma atualização concreta.
+
+**Nunca alterar rules sem aprovação do Product Owner.** Apresentar as propostas e esperar confirmação.
+
+## Passo 4 — Registrar no TASK_REGISTRY.md
+Adicionar uma seção `### Retrospectiva` na task correspondente:
+
+```markdown
+### Retrospectiva
+- **Funcionou**: [item 1], [item 2]
+- **Problema**: [item 1], [item 2]
+- **Melhoria aplicada**: [rule X atualizada com Y] (ou "nenhuma")
+```
+
+## Passo 5 — Capturar conhecimento
+Se a task envolveu conceitos novos que podem cair em prova:
+- Gerar pílula de conhecimento em `knowledge/disciplina/`
+- Atualizar flashcards com perguntas baseadas no que foi aprendido

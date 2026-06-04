@@ -1,0 +1,5 @@
+# Colar aqui a URL do vídeo do YouTube (não-listado, até 5min)
+# após gravar e fazer upload. Exemplo:
+# https://youtu.be/XXXXXXXXXXX
+
+(pendente — gravar conforme MANUAL_ENTREGA.md bloco E)

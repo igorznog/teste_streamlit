@@ -1,0 +1,30 @@
+---
+description: Padrões de código Python para projetos FIAP
+globs: "**/*.py"
+alwaysApply: false
+---
+
+# Padrões Python — FIAP
+
+## Estilo
+- Comentários em Português do Brasil.
+- Nomes de variáveis e funções em inglês, snake_case.
+- Type hints em assinaturas de funções.
+- Docstrings em funções públicas.
+
+## Tratamento de erros
+- Usar try/except em toda entrada do usuário.
+- Nunca capturar Exception genérico sem re-raise.
+
+## Dados
+- Quando o enunciado pedir "vetores", usar listas de dicionários.
+- Quando pedir CRUD, criar menu CLI com loop + decisão.
+
+## Dependências
+- Preferir stdlib sempre que possível.
+- Se precisar de pacote externo, avisar o Product Owner antes de usar.
+- Nunca colocar versões inventadas em requirements.txt.
+
+## Estrutura
+- Separar lógica de negócio (módulo) do ponto de entrada (main.py).
+- Um módulo = uma responsabilidade.

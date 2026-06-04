@@ -1,0 +1,3 @@
+id,cultura_tipo,produto,dosagem_por_metro,num_ruas,comprimento_rua,metros_totais,total_produto_ml,total_produto_litros
+1,Cana-de-açúcar,Herbicida,450.0,30,100.0,3000.0,1350000.0,1350.0
+2,Café,Fosfato,400.0,10,100.0,1000.0,400000.0,400.0

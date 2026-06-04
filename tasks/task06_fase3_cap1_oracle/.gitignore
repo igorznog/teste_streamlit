@@ -1,0 +1,24 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+venv/
+.ipynb_checkpoints/
+.DS_Store
+*.swp
+.env
+.env.*
+
+# Não commitar dataset gerado se preferir manter o script como fonte da verdade.
+# Como o enunciado pede dados reais carregados, mantemos o CSV commitado.
+# dados/leituras_sensores.csv
+
+# Streamlit cache
+.streamlit/cache/
+
+# Auxiliary/automation scripts and files not requested in delivery
+scripts/
+prints/oracle_auto/
+PREPARAR_ENTREGA.md
+.git.local-backup/
+

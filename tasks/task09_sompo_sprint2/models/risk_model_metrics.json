@@ -1,0 +1,155 @@
+{
+  "threshold": 0.34,
+  "classification_metrics": {
+    "accuracy": 0.9533,
+    "precision": 0.9512,
+    "recall": 0.963,
+    "f1_score": 0.9571,
+    "roc_auc": 0.9846
+  },
+  "confusion_matrix": {
+    "labels": [
+      "risco_baixo_0",
+      "risco_alto_1"
+    ],
+    "matrix": [
+      [
+        65,
+        4
+      ],
+      [
+        3,
+        78
+      ]
+    ],
+    "tn": 65,
+    "fp": 4,
+    "fn": 3,
+    "tp": 78
+  },
+  "classification_report": {
+    "risco_baixo": {
+      "precision": 0.9558823529411765,
+      "recall": 0.9420289855072463,
+      "f1-score": 0.948905109489051,
+      "support": 69.0
+    },
+    "risco_alto": {
+      "precision": 0.9512195121951219,
+      "recall": 0.9629629629629629,
+      "f1-score": 0.9570552147239264,
+      "support": 81.0
+    },
+    "accuracy": 0.9533333333333334,
+    "macro avg": {
+      "precision": 0.9535509325681493,
+      "recall": 0.9524959742351047,
+      "f1-score": 0.9529801621064887,
+      "support": 150.0
+    },
+    "weighted avg": {
+      "precision": 0.953364418938307,
+      "recall": 0.9533333333333334,
+      "f1-score": 0.9533061663158836,
+      "support": 150.0
+    }
+  },
+  "feature_importance_top10": [
+    {
+      "feature": "distancia_corpo_dagua",
+      "importance": 0.254039
+    },
+    {
+      "feature": "tipo_solo_latossolo",
+      "importance": 0.227927
+    },
+    {
+      "feature": "umidade_solo",
+      "importance": 0.129957
+    },
+    {
+      "feature": "precipitacao_24h",
+      "importance": 0.096445
+    },
+    {
+      "feature": "historico_sinistros_area",
+      "importance": 0.087786
+    },
+    {
+      "feature": "tipo_solo_argissolo",
+      "importance": 0.044219
+    },
+    {
+      "feature": "precipitacao_prevista",
+      "importance": 0.02591
+    },
+    {
+      "feature": "tipo_solo_gleissolo",
+      "importance": 0.025895
+    },
+    {
+      "feature": "declividade_terreno",
+      "importance": 0.021716
+    },
+    {
+      "feature": "ultima_manutencao_dias",
+      "importance": 0.01776
+    }
+  ],
+  "dataset": {
+    "path": "data/dataset_simulado.csv",
+    "rows": 600,
+    "positive_label_1": 324,
+    "positive_rate": 0.54,
+    "train_rows": 450,
+    "test_rows": 150,
+    "test_size": 0.25,
+    "random_state": 42
+  },
+  "model": {
+    "algorithm": "RandomForestClassifier",
+    "n_estimators": 350,
+    "max_depth": 8,
+    "min_samples_leaf": 2,
+    "class_weight": "balanced"
+  },
+  "features": {
+    "numeric": [
+      "umidade_solo",
+      "precipitacao_24h",
+      "precipitacao_prevista",
+      "temperatura",
+      "declividade_terreno",
+      "distancia_corpo_dagua",
+      "historico_sinistros_area",
+      "horas_uso_equipamento",
+      "ultima_manutencao_dias",
+      "velocidade_vento"
+    ],
+    "categorical": [
+      "tipo_operacao",
+      "cultura",
+      "tipo_solo"
+    ],
+    "ignored": [
+      "data_hora",
+      "equipamento_id"
+    ],
+    "target": "risco_label"
+  },
+  "score_bands": {
+    "baixo": {
+      "min": 0,
+      "max": 33
+    },
+    "medio": {
+      "min": 34,
+      "max": 66
+    },
+    "alto": {
+      "min": 67,
+      "max": 100
+    }
+  },
+  "trained_at_utc": "2026-06-04T20:06:35+00:00"
+}

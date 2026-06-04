@@ -1,0 +1,24 @@
+---
+description: Padrões de documentação para projetos FIAP
+globs: "**/*.md"
+alwaysApply: false
+---
+
+# Padrões de Documentação — FIAP
+
+## Idioma
+- Sempre Português do Brasil.
+
+## Formatação
+- Direto ao ponto, sem enrolação.
+- Usar tabelas para comparações e checklists.
+- Usar blocos de código com linguagem especificada para comandos.
+
+## Manuais de entrega
+Ao gerar um manual de entrega para o Product Owner, incluir:
+1. O que cada arquivo faz (explicação simples).
+2. Como rodar passo a passo (comandos exatos).
+3. Roteiro de vídeo com falas sugeridas e cronograma.
+4. Valores de teste sugeridos para demonstração.
+5. Checklist de pré-entrega.
+6. Comando para gerar o ZIP final.

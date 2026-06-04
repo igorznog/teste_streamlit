@@ -1,0 +1,30 @@
+---
+description: Regra para consulta e atualização de status de tasks. Ativa quando o usuário pergunta sobre status, progresso, ou quer retomar uma task.
+alwaysApply: false
+---
+
+# Consulta e Atualização de Status
+
+## Quando o Product Owner pergunta sobre status
+1. Ler `TASK_REGISTRY.md`, `GROUP.md` e, se existir, `LOCAL.md` na raiz do workspace.
+2. Apresentar um resumo conciso:
+   - Tasks em andamento: checklist com % de conclusão.
+   - Pendências do aluno (itens que só ele pode fazer).
+   - Próximos passos sugeridos.
+
+## Quando retomar uma task existente
+1. Ler o registry para entender onde parou.
+2. Se houver `specs/taskNN_nome/`, ler `SPEC.md`, `SPLIT.md` e `WORKPLAN.md`.
+3. Listar o que falta (itens não marcados).
+4. Perguntar ao Product Owner se quer fazer sua parte, revisar, assumir parte de alguém ou integrar.
+
+## Quando finalizar um item
+1. Verificar que o item realmente funciona (rodar teste se aplicável).
+2. Marcar como `[x]` no `TASK_REGISTRY.md`.
+3. Se todos os itens de código estiverem concluídos, sugerir quality review.
+
+## Quando todos os requisitos estiverem atendidos
+1. Verificar se restam apenas pendências do aluno (vídeo, formatação, push).
+2. Listar essas pendências claramente.
+3. Oferecer gerar o ZIP quando o Product Owner confirmar que completou as pendências.
+4. Atualizar status para CONCLUÍDA quando tudo estiver entregue.

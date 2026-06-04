@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "author": "Squad WOLF — FarmTech Fase 2",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "swN",
+      "top": -110,
+      "left": 260,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "swP",
+      "top": -20,
+      "left": 260,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-slide-switch",
+      "id": "swK",
+      "top": 70,
+      "left": 260,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr",
+      "top": 190,
+      "left": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht",
+      "top": -150,
+      "left": -200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "rele",
+      "top": 50,
+      "left": -260,
+      "attrs": { "color": "blue" }
+    }
+  ],
+  "connections": [
+    [ "esp:GND.1", "swN:1", "black", [ "h0" ] ],
+    [ "esp:D4",    "swN:2", "green", [ "h0" ] ],
+    [ "esp:GND.2", "swP:1", "black", [ "h0" ] ],
+    [ "esp:D5",    "swP:2", "green", [ "h0" ] ],
+    [ "esp:GND.3", "swK:1", "black", [ "h0" ] ],
+    [ "esp:D18",   "swK:2", "green", [ "h0" ] ],
+
+    [ "esp:3V3",   "ldr:VCC", "red",   [ "h0" ] ],
+    [ "esp:GND.1", "ldr:GND", "black", [ "h0" ] ],
+    [ "esp:D34",   "ldr:AO",  "orange",[ "h0" ] ],
+
+    [ "esp:3V3",   "dht:VCC", "red",   [ "h0" ] ],
+    [ "esp:GND.2", "dht:GND", "black", [ "h0" ] ],
+    [ "esp:D15",   "dht:SDA", "yellow",[ "h0" ] ],
+
+    [ "esp:VIN",   "rele:VCC", "red",   [ "h0" ] ],
+    [ "esp:GND.3", "rele:GND", "black", [ "h0" ] ],
+    [ "esp:D23",   "rele:IN",  "blue",  [ "h0" ] ],
+
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ]
+  ],
+  "serialMonitor": {
+    "display": "always",
+    "newline": "lf"
+  },
+  "dependencies": {}
+}

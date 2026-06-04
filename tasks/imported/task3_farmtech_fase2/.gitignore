@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+.venv/
+venv/
+
+.Rhistory
+.RData
+.Rproj.user/
+
+opcional2_analise/graficos/
+
+.DS_Store
+Thumbs.db

@@ -1,0 +1,77 @@
+---
+description: Protocolo de intake de tasks da FIAP. Ativa quando o usuário cola um enunciado de trabalho.
+alwaysApply: true
+---
+
+# Intake de Task FIAP
+
+## Entrada esperada
+- O Product Owner pode colar o enunciado inteiro da task no chat.
+- Se for uma parte de trabalho em grupo, ele pode colar apenas a parte combinada; nesse caso, conferir `SPLIT.md`.
+- Nunca implementar diretamente a partir do texto colado sem antes criar/atualizar a spec.
+- Preferir fonte oficial do portal FIAP: URL/captura automatica por `agent-browser` ou fallback manual via `docs/templates/FIAP_TASK_CAPTURE_TEMPLATE.md`.
+
+## Passo 0 — Ler ficheiros de contexto
+ANTES de qualquer coisa, ler na raiz do workspace, **nesta ordem**:
+1. `TASK_REGISTRY.md`
+2. `GROUP.md` (identificação do grupo e membros; se só placeholders, avisar o Product Owner)
+3. `LOCAL.md` **se existir** (quem está neste clone; criar a partir de `LOCAL.example.md`)
+
+### Passo 0.1 — Autenticar membro quando identidade estiver indefinida
+- Se, após ler `GROUP.md` e `LOCAL.md`, ainda não estiver claro com quem o assistente está falando, parar o fluxo e coletar no chat:
+  - **Nome do aluno**
+  - **RM do aluno**
+- Tratar Nome e RM como variáveis obrigatórias para continuar o intake.
+- Usar exatamente esta mensagem padrão:
+  > "Para iniciar o fluxo com segurança, preciso confirmar seus dados. Por favor, informe: **Nome completo** e **RM**."
+- Se possível, orientar a registrar esses dados em `LOCAL.md` para evitar nova coleta nas próximas sessões.
+
+- Se a task já existe no registry: informar o Product Owner do status atual e perguntar se quer continuar ou recomeçar.
+- Se é task nova: seguir os passos abaixo.
+
+## Passo 1 — Extrair requisitos
+- Ler o enunciado inteiro sem pular nada.
+- Listar cada requisito como item de checklist (a, b, c...).
+- Diferenciar obrigatórios de opcionais ("ir além").
+- Preservar prazo, status de submissao, rubrica, anexos, disclaimers e fonte oficial.
+
+## Passo 2 — Identificar entregáveis
+- Código (quais linguagens?)
+- Documentos (resumo, relatório?)
+- Vídeo (duração? plataforma?)
+- Arquivo final (ZIP? estrutura?)
+- Classificar o tipo usando `docs/templates/FIAP_DELIVERY_TYPES.md` quando existir.
+
+## Passo 2.5 — Definir modo de trabalho
+- Perguntar se a task é **solo** ou **em grupo**.
+- Se for grupo, perguntar o papel do aluno agora:
+  - coordenar/dividir a task;
+  - fazer apenas sua parte;
+  - revisar parte de outro membro;
+  - assumir parte de outro membro;
+  - integrar a entrega final.
+- Conferir `GROUP.md` antes de sugerir responsáveis.
+
+## Passo 3 — Verificar conflitos com tasks existentes
+- Há tasks em andamento que precisam ser finalizadas primeiro?
+- Há dependências entre tasks?
+- Informar o Product Owner se houver algo pendente.
+
+## Passo 4 — Perguntar o que falta
+- Se algo estiver ambíguo, perguntar ANTES de assumir.
+- Se o enunciado referenciar materiais sem acesso, pedir ao Product Owner.
+
+## Passo 5 — Verificar knowledge base
+- Verificar se existe conteúdo em `knowledge/` relacionado à disciplina/tema da task.
+- Se existir: informar o Product Owner.
+- Se não existir: sugerir ingerir conteúdo das aulas antes ou em paralelo.
+- Quando a task exigir defesa, video, quiz ou prova, sugerir study pack por `docs/workflows/10-study-pack-generation.md`.
+
+## Passo 6 — Registrar e planejar
+- Adicionar a nova task ao `TASK_REGISTRY.md` com status NÃO INICIADA.
+- Criar `specs/taskNN_nome/SPEC.md` antes de qualquer implementação.
+- Criar `WORKPLAN.md`; se for grupo, criar também `SPLIT.md` e `INTEGRATION.md`.
+- Propor estrutura de pastas em `tasks/taskNN_nome/`.
+- Prever `REVIEW.md`, perguntas de defesa e checklist de segurança/PII/copyright quando houver publicacao/exportacao.
+- Só começar execução após aprovação do Product Owner.
+- Atualizar status para EM ANDAMENTO após aprovação.

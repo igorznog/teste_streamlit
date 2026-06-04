@@ -1,0 +1,29 @@
+---
+description: Padrões de código R para projetos FIAP
+globs: "**/*.R"
+alwaysApply: false
+---
+
+# Padrões R — FIAP
+
+## Estilo
+- Comentários em Português do Brasil.
+- Usar `<-` para atribuição (não `=`).
+- Nomes de variáveis em snake_case.
+
+## Caminhos de arquivo
+- Nunca usar `sys.frame()$ofile` — não funciona com Rscript.
+- Usar `commandArgs(trailingOnly = FALSE)` para obter o diretório do script.
+
+## Dependências
+- Preferir R base sempre que possível (url + readLines ao invés de httr).
+- Se precisar de pacote externo, documentar no cabeçalho do script com o comando de instalação.
+- Usar `lib = Sys.getenv("R_LIBS_USER")` no install.packages se a lib do sistema não for gravável.
+
+## Estatísticas
+- Sempre calcular no mínimo: média (`mean`) e desvio padrão (`sd`).
+- Usar `na.rm = TRUE` em funções estatísticas.
+
+## Saída
+- Exibir dados no terminal via `cat()` e `sprintf()`.
+- Mostrar os dados brutos antes das estatísticas para contexto.

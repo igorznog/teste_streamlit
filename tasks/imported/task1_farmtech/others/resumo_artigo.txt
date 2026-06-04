@@ -1,0 +1,19 @@
+USO DE VEÍCULOS AÉREOS NÃO TRIPULADOS (VANT) EM AGRICULTURA DE PRECISÃO
+Resumo do Capítulo 8 — JORGE, L. A. C.; INAMASU, R. Y. Embrapa Instrumentação, São Carlos, SP.
+
+O capítulo aborda o uso de Veículos Aéreos Não Tripulados (VANTs), também conhecidos como drones, como ferramenta emergente na agricultura de precisão. Os autores contextualizam o crescimento global do interesse por essas aeronaves, impulsionado por avanços em tecnologia computacional, miniaturização de sensores, materiais mais leves e sistemas de navegação por GPS. O Japão se destaca com mais de 2.000 VANTs aplicados na agricultura, enquanto no Brasil os primeiros desenvolvimentos ocorreram na década de 1980, com destaque para o projeto ARARA da Embrapa, voltado ao monitoramento de áreas agrícolas por meio de fotografias aéreas.
+
+O artigo descreve os componentes de um VANT: a aeronave em si, a estação de controle em solo (GCS), o sistema GPS, a unidade de navegação inercial (IMU) e o piloto automático (AFCS). Em conjunto, esses elementos permitem o planejamento e execução de missões autônomas de monitoramento. Os VANTs são classificados quanto ao tipo de asa (fixa, rotativa ou multirotor), cada um com vantagens e desvantagens em termos de custo, transporte, condições climáticas e capacidade de carga. Os multirotores se destacam para uso agrícola por permitirem decolagem vertical, voo estacionário e operação em espaços restritos, apesar da autonomia de bateria limitada a cerca de 30 minutos.
+
+Uma parte significativa do capítulo é dedicada aos sensores embarcados. São apresentadas quatro categorias principais: câmeras no espectro visível (RGB), que permitem identificar falhas de plantio e acompanhar o desenvolvimento das culturas; sensores no infravermelho próximo (NIR), usados para gerar índices de vegetação como o NDVI, que indica estresse hídrico e nutricional; sensores hiperespectrais, que capturam centenas de bandas do espectro eletromagnético e permitem identificar propriedades bioquímicas como clorofila, nitrogênio e lignina; e câmeras térmicas, utilizadas para detectar estresse hídrico por meio do mapeamento de temperatura do dossel vegetal. Ainda é mencionada a fluorescência da clorofila como indicador de estresse, detectável indiretamente por combinação de sensores.
+
+Os autores apresentam um fluxo de trabalho em sete etapas para o uso de VANTs na agricultura de precisão: planejamento de voo, voo com sobreposição de imagens, obtenção de imagens georreferenciadas, processamento das imagens, geração de mosaicos, análise em ferramentas GIS e geração de relatórios. Detalhes técnicos são discutidos, como a relação entre altitude de voo e resolução do pixel, sobreposição mínima de 60% para mosaicos de qualidade, e cuidados com velocidade de obturador para evitar borramentos.
+
+Na conclusão, os autores ressaltam que, apesar de estarem em fase de regulamentação pela ANAC, os VANTs se tornam cada vez mais acessíveis e confiáveis. Os desafios principais ainda envolvem manutenção inadequada, condições de operação em campo e a necessidade de padronização regulatória. Entretanto, a tendência é que os drones se consolidem como uma das ferramentas mais úteis na agricultura de precisão, democratizando o acesso ao sensoriamento remoto que antes dependia exclusivamente de satélites e aeronaves tripuladas.
+
+---
+FORMATAÇÃO EXIGIDA PELA FIAP (aplicar no Word/Google Docs):
+- Fonte: Arial 11
+- Espaçamento entre linhas: 1 (simples)
+- Margens direita e esquerda: 2 cm
+- Máximo: 1 folha A4

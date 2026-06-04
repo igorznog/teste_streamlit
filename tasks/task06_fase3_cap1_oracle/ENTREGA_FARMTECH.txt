@@ -1,0 +1,52 @@
+========================================================================
+             FIAP - CURSO DE INTELIGÊNCIA ARTIFICIAL (1TIAOA)
+               FASE 3 — COLHEITA DE DADOS E INSIGHTS - CAP 1
+========================================================================
+
+PROJETO: FarmTech Solutions
+CULTURA: Café (Coffea arabica) - Continuidade da Fase 2
+PRAZO DE ENTREGA: 19/05/2026 23h59
+
+------------------------------------------------------------------------
+INTEGRANTES DO GRUPO:
+------------------------------------------------------------------------
+* Higor Henrique Garcia - RM 571820 (Coordenador Técnico)
+* Vinicius Anjos        - RM 572814
+* Igor                  - RM 572822
+* Humberto              - RM 570536
+
+------------------------------------------------------------------------
+LINKS DA ENTREGA (PRINCIPAL):
+------------------------------------------------------------------------
+📌 REPOSITÓRIO GITHUB (Código-fonte, Scripts, Prints e Docs):
+👉 https://github.com/higorhg/farmtech-fase3-cap1
+
+📌 VÍDEO DEMONSTRATIVO (YouTube - Não Listado, 4min30s):
+👉 https://www.youtube.com/watch?v=_6Lw-zrImlQ
+
+------------------------------------------------------------------------
+ESTRUTURA E ESCOPO ENTREGUE:
+------------------------------------------------------------------------
+O projeto cobre 100% dos requisitos obrigatórios e opcionais ("Ir Além"):
+
+1. FRENTE OBRIGATÓRIA (Banco de Dados Oracle - 10 pontos):
+   - Carga do dataset determinístico de 1000 linhas gerado a partir da
+     telemetria do ESP32 simulado (Fase 2).
+   - Scripts SQL de criação de tabela (DDL) e 10 consultas analíticas (DML).
+   - 11 prints de evidências da carga no Oracle SQL Developer salvos na
+     pasta `prints/`.
+
+2. IR ALÉM OPÇÃO 1 (Dashboard Python - 5 pontos):
+   - Dashboard analítico desenvolvido em Python + Streamlit + Plotly.
+   - Análise interativa com filtros temporais, gráficos de telemetria
+     (pH, umidade, NPK, acionamento da bomba de irrigação).
+   - Simulação de chuva que atualiza a recomendação de irrigação em tempo real.
+
+3. IR ALÉM OPÇÃO 2 (Modelagem de IA - 5 pontos):
+   - Notebook Jupyter (`ml/`) com a comparação de 5 modelos de classificação
+     (Logistic Regression, KNN, Decision Tree, Random Forest e SVM).
+   - Análise de solo e classificação das melhores culturas.
+
+========================================================================
+                      AGRADECEMOS A AVALIAÇÃO!
+========================================================================
